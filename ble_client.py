@@ -9,7 +9,7 @@ iterations = 10
 
 port = 1
 sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
-sock.connect((targetBluetoothMacAddress, port))
+sock.connect(("9C:B1:50:1A:7B:FA", port))
 
 while counter <= iterations: 
     sock.send("hello!!")
