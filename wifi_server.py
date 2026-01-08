@@ -1,4 +1,4 @@
-import socet
+import socket
 import time
 import sys
 
