@@ -14,7 +14,8 @@ while counter <= iterations:
         s.connect(("10.11.217.162", 5000))
         s.sendall(bytes('Hello.', "utf-8"))
         message = s.recv(1024).decode("utf-8")
-        iterations+=1
+        counter+=1
+        print(counter)
         s.close()
     except Exception as msg:
         print(msg)
