@@ -72,6 +72,5 @@ plt.xlabel("Number of Epochs")
 plt.ylabel("Accuracy")
 plt.legend()
 plt.grid(linestyle = '--', linewidth = 0.5)
-plt.title('Accuracy over Epoch')
 plt.savefig('acc.png')
 
