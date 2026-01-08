@@ -3,7 +3,7 @@ import time
 
 reset = 1
 start = 0
-iterations = 100
+iterations = 100000
 counter = 0
 
 start = time.time()
