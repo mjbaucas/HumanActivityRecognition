@@ -66,7 +66,7 @@ model.summary()
 
 
 
-plt.plot(history.history['val_accuracy'], ,marker='s', label='Validation')
+plt.plot(history.history['val_accuracy'], marker='s', label='Validation')
 plt.plot(history.history['accuracy'], marker='o', label='Training')
 plt.xlabel("Number of Epochs")
 plt.ylabel("Accuracy")
