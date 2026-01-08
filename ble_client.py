@@ -1,4 +1,5 @@
 import bluetooth
+import time
 
 counter = 0
 
