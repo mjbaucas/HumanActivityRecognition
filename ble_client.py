@@ -6,10 +6,12 @@ counter = 0
 start = time.time()
 #while True:
 iterations = 10
+
+port = 1
+sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
+sock.connect((targetBluetoothMacAddress, port))
+
 while counter <= iterations: 
-    port = 1
-    sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
-    sock.connect((targetBluetoothMacAddress, port))
     sock.send("hello!!")
     sock.close()
     counter+=1
