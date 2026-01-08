@@ -22,5 +22,6 @@ while counter <= iterations:
         reset = 0
 end = time.time()
 elapsed = end-start
+print(elapsed)
 if elapsed > 1.0:
     print(elapsed)
