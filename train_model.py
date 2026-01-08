@@ -66,9 +66,12 @@ model.summary()
 
 
 
-plt.plot(history.history['val_accuracy'], label='Validation')
-plt.plot(history.history['accuracy'], label='Training')
+plt.plot(history.history['val_accuracy'], ,marker='s', label='Validation')
+plt.plot(history.history['accuracy'], marker='o', label='Training')
+plt.xlabel("Number of Epochs")
+plt.ylabel("Accuracy")
 plt.legend()
+plt.grid(linestyle = '--', linewidth = 0.5)
 plt.title('Accuracy over Epoch')
 plt.savefig('acc.png')
 
