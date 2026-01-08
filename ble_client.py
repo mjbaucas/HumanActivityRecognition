@@ -5,6 +5,7 @@ counter = 0
 
 start = time.time()
 #while True:
+iterations = 10
 while counter <= iterations: 
     port = 1
     sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
