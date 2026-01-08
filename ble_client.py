@@ -4,17 +4,20 @@ import time
 counter = 0
 
 start = time.time()
-#while True:
 iterations = 10
-
 port = 1
-sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
-sock.connect(("9C:B1:50:1A:7B:FA", port))
 
 while counter <= iterations: 
-    sock.send("hello!!")
-    sock.close()
-    counter+=1
+    try:
+        sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
+        sock.connect(("9C:B1:50:1A:7B:FA", port))
+        message = "hello!!"
+        sock.send(message.encode())
+        sock.close()
+        counter+=1
+    except OSError as e:
+        print("Connection failed:", e)
+        
 end = time.time()
 elapsed = end-start
 print(elapsed)

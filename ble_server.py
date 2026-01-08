@@ -5,12 +5,17 @@ port = 5
 server_sock.bind(("", port))
 server_sock.listen(1)
 
-client_sock,address = server_sock.accept()
-print("Accepted connection from " + str(address))
-
 while True:
-    data = client_sock.recv(1024)
-    print("received [%s]" % data)
+    try:
+        client_sock,address = server_sock.accept()
+        print("Accepted connection from " + str(address))
 
-    client_sock.close()
-    server_sock.close()
+        data = client_sock.recv(1024)
+        if data:
+            print("Received:", data.decode())
+        
+        client_sock.close()
+    except OSError as e:
+        print("Error:", e)
+        
+server_sock.close()
